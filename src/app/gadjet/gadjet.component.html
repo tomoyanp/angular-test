@@ -1,0 +1,12 @@
+<div class="body">
+    <ng-container *ngFor="let id of gadjetKeyList">
+        <div class="container" [style]="'width:' + gadjetMap[id]['width'] + '%; height:' + gadjetMap[id]['height'] + '%;'">
+            {{ id }}
+            <div class="click-point" (click)="onClickResize(id)"></div>
+        </div>
+    </ng-container>
+
+    <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+    <button mat-button (click)="onClick()">hogehoge</button>
+    <img src="assets/loading.svg" style="width: 500px;">
+</div>
